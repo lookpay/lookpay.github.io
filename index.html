@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<title>微信收款 统一返现支付收款码</title>
+<link rel="shortcut icon" href="favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="wrapper">
+<div id="controls"> <a href="#" id="small">A</a> <a href="#" id="medium" class="selected">A</a> <a href="#" id="large">A</a> </div>
+<!-- index.js 分别调控h1\h2\p大小 分三段
+  <h1>标题</h1>
+  <h2>副标题</h>-->
+<center>
+<p><font size="1" face="arial" color="#000000">现在时间：
+		<span id="cg">2019/4/21/ 上午12:00:00</span <!-- 定义一个id为cg -->
+<script>
+<!--这个cg就是span的id，初始化Date时间并转化为字符string类型,每1000毫秒，setInterval() 就会调用函数，直到被关闭。-->
+setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
+</script>
+</font>
+<img src="img/wechat.png"  alt="" width="400" height="400" />
+<p><font size="3" face="arial" color="#696969">【微信】扫一扫付钱</p></font>
+<p><font size="2" face="arial" color="#696969">-合作愉快-</p></font>
+<p><font size="2" face="arial" color="#DC143C">-杂项收款 专用微信收款二维码-</font></p>
+<p><font size="3" face="arial" color="#363636">--【注】: 联系卖家的微信 非"实名认证"固不能正常收款&支付 固打款请到指定账户 避免多余问题--</p>
+</font>
+<p><font size="2" face="arial" color="#FF6347">*温馨提示：可保存、截屏、长按扫码等</p></font>
+<p><font size="2" face="arial" color="#757575">微信：oneboy-wechat（工作使用）| QQ：2638570227</p></font>
+<!--HR分割线-->
+<HR style="border:1 dashed #987cb9" width="80%" color=#987cb9 SIZE=1>
+<p><font size="2" face="Times New Roman" color="#CD0000"> <a href="src/showlove/index.html" target="_blank">Iove You</font></a> ლ(・ω・ლ)</p>
+<!--web show time work --> 	
+<font size="1" face="arial" color="">
+<span id="showsectime" style="color:#8B7D7B;"></span>
+<script type="text/javascript">
+function NewDate(str) { 
+str = str.split('-'); 
+var date = new Date(); 
+date.setUTCFullYear(str[0], str[1] - 1, str[2]); 
+date.setUTCHours(0, 0, 0, 0); 
+return date; 
+} 
+function showsectime() {
+var birthDay =NewDate("2018-9-21");
+var today=new Date();
+var timeold=today.getTime()-birthDay.getTime();
+var sectimeold=timeold/1000
+var secondsold=Math.floor(sectimeold);
+var msPerDay=24*60*60*1000; var e_daysold=timeold/msPerDay;
+var daysold=Math.floor(e_daysold);
+var e_hrsold=(daysold-e_daysold)*-24;
+var hrsold=Math.floor(e_hrsold);
+var e_minsold=(hrsold-e_hrsold)*-60;
+var minsold=Math.floor((hrsold-e_hrsold)*-60); var seconds=Math.floor((minsold-e_minsold)*-60).toString();
+document.getElementById("showsectime").innerHTML = "已运行："+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+setTimeout(showsectime, 1000);
+}showsectime();
+</script>
+</center>
+</div>
+
+<script src="js/jquery.min.js"></script> 
+<script src="js/index.js"></script>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>联系卖家的微信 非"实名认证"固不能正常收款&支付 固打款请到指定账户 避免多余问题</p>
+<p> <a href="#" target="_blank"></a></p>
+</div>
+</body>
+</html>
+
